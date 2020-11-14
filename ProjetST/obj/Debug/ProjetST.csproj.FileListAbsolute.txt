@@ -1,0 +1,6 @@
+/Users/chloemerck/Projects/ProjetST/bin/Debug/ProjetST.exe
+/Users/chloemerck/Projects/ProjetST/bin/Debug/ProjetST.pdb
+/Users/chloemerck/Projects/ProjetST/obj/Debug/ProjetST.csprojAssemblyReference.cache
+/Users/chloemerck/Projects/ProjetST/obj/Debug/ProjetST.csproj.CoreCompileInputs.cache
+/Users/chloemerck/Projects/ProjetST/obj/Debug/ProjetST.exe
+/Users/chloemerck/Projects/ProjetST/obj/Debug/ProjetST.pdb
