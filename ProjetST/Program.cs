@@ -6,16 +6,13 @@ namespace ProjetST
 {
     class MainClass
     {
-        public static async Task Main()
+        public static void Main(string[] args)
         {
-            ST s = new ST();
 
-            Task t = s.PrintTextWithDelay();
-
-            await t;
-
-            Console.ReadLine();
-
+            Synchro syncst = new Synchro();
+            syncst.Afficher();
+            Task.WaitAll(syncst.ShowSubtitles());
+            Console.ReadKey();
         }
 
 

@@ -6,6 +6,8 @@ namespace ProjetST
 {
     public class ST
     {
+        public object item { get; private set; }
+
         public void LireST()
         {
             int counter = 0;
@@ -32,7 +34,7 @@ namespace ProjetST
             for(int i = 0; i < s.Length; i++)
             {
                 Console.Write(s[i]);
-                await Task.Delay(5);
+                await Task.Delay(0);
 
             }
         }
@@ -51,6 +53,8 @@ namespace ProjetST
             }
            
         }
+
+        
 
             public ST()
         {

@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{5A3FF016-0359-41B7-9E56-3802039E9235}|Default">
   <MonoDevelop.Ide.ItemProperties.ProjetST PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ST.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sous_Titre.cs">
     <Files>
-      <File FileName="Program.cs" Line="15" Column="21" />
-      <File FileName="ST.cs" Line="43" Column="75" />
-      <File FileName="../../Library/Caches/VisualStudio/8.0/Symbols/mono/mono/620cf538206fe0f8cd63d76c502149b331f56f51/mcs/class/referencesource/mscorlib/system/runtime/exceptionservices/exceptionservicescommon.cs" Line="157" Column="1" />
+      <File FileName="Program.cs" Line="15" Column="30" />
+      <File FileName="Sous_Titre.cs" Line="16" Column="13" />
+      <File FileName="Synchro.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProjetST" expanded="True">
             <Node name="ProjetST" expanded="True">
-              <Node name="ST.cs" selected="True" />
+              <Node name="Sous_Titre.cs" selected="True" />
             </Node>
           </Node>
         </State>

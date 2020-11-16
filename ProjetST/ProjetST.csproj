@@ -33,6 +33,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ST.cs" />
+    <Compile Include="Sous_Titre.cs" />
+    <Compile Include="Synchro.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
