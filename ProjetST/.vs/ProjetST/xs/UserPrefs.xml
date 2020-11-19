@@ -2,10 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.ProjetST PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Synchro.cs">
     <Files>
-      <File FileName="Program.cs" Line="21" Column="1" />
-      <File FileName="Sous_Titre.cs" Line="1" Column="1" />
-      <File FileName="ST.cs" Line="1" Column="1" />
-      <File FileName="Synchro.cs" Line="76" Column="13" />
+      <File FileName="../../Downloads/Projet_Subtitles-main/LecteurVideo/MainWindow.xaml.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" />
+      <File FileName="Sous_Titre.cs" />
+      <File FileName="ST.cs" />
+      <File FileName="Synchro.cs" Line="28" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

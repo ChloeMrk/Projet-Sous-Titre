@@ -26,7 +26,7 @@ namespace ProjetST
             TimeSpan stop = TimeSpan.Parse("00:00");
             string[] split = null;
 
-            using (StreamReader ReadExistingFile = new StreamReader(FilePath + @"/Glee - S02E02 - Britney-Brittany.srt"))
+            using (StreamReader ReadExistingFile = new StreamReader(FilePath + @"/KaamelottS01E01french.txt"))
             {
 
 
@@ -37,6 +37,7 @@ namespace ProjetST
                     if (line == "")
                     {
                         subt.Add(new Sous_Titre(ST, start, stop));
+                        ST = "";
                     }
 
                     
@@ -52,12 +53,12 @@ namespace ProjetST
                         {
                             if (ST == null)
                             {
-                                ST = line;
+                                ST +=  line + "\n";
                             }
 
                             else
                             {
-                                ST += "\n" + line;
+                                ST +=  line + "\n";
                             }
 
                         }
