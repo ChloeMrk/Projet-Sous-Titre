@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{5A3FF016-0359-41B7-9E56-3802039E9235}|Default">
   <MonoDevelop.Ide.ItemProperties.ProjetST PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sous_Titre.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Synchro.cs">
     <Files>
-      <File FileName="Program.cs" Line="15" Column="30" />
-      <File FileName="Sous_Titre.cs" Line="16" Column="13" />
-      <File FileName="Synchro.cs" />
+      <File FileName="Program.cs" Line="21" Column="1" />
+      <File FileName="Sous_Titre.cs" Line="1" Column="1" />
+      <File FileName="ST.cs" Line="1" Column="1" />
+      <File FileName="Synchro.cs" Line="76" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProjetST" expanded="True">
             <Node name="ProjetST" expanded="True">
-              <Node name="Sous_Titre.cs" selected="True" />
+              <Node name="Synchro.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -19,6 +20,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Sous_Titre/Sous_Titre.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

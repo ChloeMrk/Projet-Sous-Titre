@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<PackageReference Include="VideoLAN.LibVLC.Mac" Version="3.1.3.1" />
+<PackageReference Include="LibVLCSharp" Version="3.4.9" />
+<PackageReference Include="LibVLCSharp.Forms" Version="3.4.9" />
+
+
+<configuration>
+  <packageSources>
+    <add key="videolan-preview" value="https://f.feedz.io/videolan/preview/nuget/index.json" />
+  </packageSources>
+</configuration>
+
+
+

@@ -17,66 +17,72 @@ namespace ProjetST
 
         public void Afficher()
         {
-            Regex StartEnd = new Regex(@"\d\d:\d\d:\d\d,\d\d\d");
-            Regex SubtitleTxt = new Regex(@"^(\D).+");
+            Regex time = new Regex(@"^\d\d:\d\d:\d\d,\d\d\d");
+            Regex text = new Regex(@"^(.).+(\r\n|$)");
             string FilePath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            string ST = "";
 
-            TimeSpan start = new TimeSpan(0);
-            TimeSpan stop = new TimeSpan(0);
-            
-            
-                using (StreamReader ReadExistingFile = new StreamReader(FilePath + @"/Banshee - 1x01 - Pilot.FR.HUFLIX.TV copie.txt"))
+            string ST = null;
+            TimeSpan start = TimeSpan.Parse("00:00");
+            TimeSpan stop = TimeSpan.Parse("00:00");
+            string[] split = null;
+
+            using (StreamReader ReadExistingFile = new StreamReader(FilePath + @"/Glee - S02E02 - Britney-Brittany.srt"))
+            {
+
+
+                string line;
+
+                while ((line = ReadExistingFile.ReadLine()) != null)
                 {
-                    string line;
-
-                    while ((line = ReadExistingFile.ReadLine()) != null)
+                    if (line == "")
                     {
-                        if (line == "")
-                        {
-                            subt.Add(new Sous_Titre(ST, start, stop));
-                        }
-                        if (StartEnd.Match(line).Success)
-                        {
-                            string[] time = line.Split(' ');
-                            start = TimeSpan.Parse(time[0]);
-                            stop = TimeSpan.Parse(time[2]);
-
-                        }
-
-                        if (SubtitleTxt.Match(line).Success)
-                        {
-                            ST = line;
-                            
-                        }
+                        subt.Add(new Sous_Titre(ST, start, stop));
                     }
-                }
-            
 
+                    
+                        if (time.Match(line).Success)
+                        {
+                            split = line.Split(' ');
+                            start = TimeSpan.Parse(split[0]);
+                            stop = TimeSpan.Parse(split[2]);
+
+                        }
+
+                        else if (text.Match(line).Success)
+                        {
+                            if (ST == null)
+                            {
+                                ST = line;
+                            }
+
+                            else
+                            {
+                                ST += "\n" + line;
+                            }
+
+                        }
+  
+                }
+
+            }
         }
+
 
         public async Task ShowSubtitles()
         {
-            TimeSpan previous = new TimeSpan();
-
             await Task.Delay(subt[0].start);
             Console.WriteLine(subt[0].ST);
+            await Task.Delay(subt[0].stop - subt[0].start);
             Console.Clear();
 
-            for (int showsub = 1; showsub < subt.Count(); showsub++)
+            for (int i = 1; i < subt.Count;i++)
             {
-                previous = subt[showsub - 1].stop;
-
-                await Task.Delay(subt[showsub].start - previous);
-                Console.WriteLine(subt[showsub].ST);
-
-
+                await Task.Delay(subt[i].start - subt[i - 1].stop);
+                Console.WriteLine(subt[i].ST);
+                await Task.Delay(subt[i].stop - subt[i].start);
+                Console.Clear();
             }
-
-
-
         }
-
 
     }
 }
